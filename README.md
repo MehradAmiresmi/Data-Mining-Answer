@@ -90,3 +90,96 @@ The next phase of the project will be:
 
 ---
 
+# ❤️ Heart Disease Data Analysis – Data Understanding Phase
+
+---
+
+## 📊 Dataset Overview
+
+The dataset contains medical attributes used to predict the presence of heart disease in patients.
+
+### 🔑 Key Features
+
+* `age` → Age of the patient
+* `sex` → Gender (0 = female, 1 = male)
+* `cp` → Chest pain type
+* `trestbps` → Resting blood pressure
+* `chol` → Cholesterol level
+* `thalach` → Maximum heart rate achieved
+* `oldpeak` → ST depression
+* `target` → Presence of heart disease (0 = No, 1 = Yes)
+
+---
+
+## 🔍 Exploratory Data Analysis (EDA)
+
+### 📌 1. Distribution Analysis
+
+* Most features show approximately normal distributions
+* Some features such as `chol` and `oldpeak` exhibit noticeable **skewness**
+* The `thalach` feature appears relatively normally distributed
+
+---
+
+### 📌 2. Central Tendency (Mean vs Median)
+
+* In skewed features, there is a clear difference between mean and median
+* This indicates the presence of **outliers**
+
+👉 **Insight:** Median is more reliable for skewed distributions.
+
+---
+
+### 📌 3. Outlier Detection
+
+Using boxplots:
+
+* Features such as `chol` and `trestbps` contain outliers
+* Outliers may negatively affect model performance
+
+---
+
+### 📌 4. Class Balance Analysis
+
+* The target variable shows slight imbalance:
+
+  * Class 0 (No Disease): fewer samples
+  * Class 1 (Disease): more samples
+
+👉 **Insight:**
+
+* The dataset is slightly imbalanced
+
+---
+
+### 📌 5. Feature Relationships
+
+* Strong relationships observed between:
+
+  * `cp` (chest pain type) and target
+  * `thalach` (maximum heart rate) and target
+
+* Patients with:
+
+  * specific chest pain types
+  * higher heart rates
+    → tend to have a higher probability of heart disease
+
+
+---
+
+## 📈 Key Insights
+
+* Presence of skewness in several important features
+* Existence of outliers in numerical variables
+* Slight imbalance in the target variable
+* Certain features have strong predictive power
+
+---
+
+## 🧠 Conclusion
+
+The dataset provides valuable patterns for predicting heart disease.
+However, proper preprocessing (handling outliers, scaling, and balancing) is essential before moving to the modeling phase.
+
+---
